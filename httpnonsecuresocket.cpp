@@ -43,8 +43,12 @@ void HttpNonSecureSocket::onNewDataReady()
         //this is because in some cases icon request automatically is sent without arguments
         if(requestValidator.getHttpListArgs().size() > 0){
         //creating objs in runtime
-        ClientImplementation *httpCImplementation = new jsonEntity(socketInstance);
-        httpCImplementation->setHttpRequestValidator(&requestValidator);
+        ClientImplementation *httpCImplementation = new jsonEntity;
+        httpCImplementation->setHttpRequestValidator((//explicit cast to shared ptr
+                                                         std::shared_ptr<HttpRequestValidator>) &requestValidator);
+        //setting negotiator
+        httpCImplementation->setNegotiator((std::shared_ptr<QTcpSocket>) socketInstance);
+        //executing
         httpCImplementation->execute();
         } //end of if statement
     }

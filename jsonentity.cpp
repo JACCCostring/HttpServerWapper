@@ -1,17 +1,8 @@
 #include "jsonentity.h"
 
-jsonEntity::jsonEntity(QTcpSocket *negociator): instanceNegotiator(negociator)
+jsonEntity::jsonEntity()
 {
 
-}
-
-jsonEntity::~jsonEntity()
-{
-    if(params)
-        delete params;
-
-    if(instanceNegotiator)
-    instanceNegotiator->deleteLater();
 }
 
 void jsonEntity::execute(){
@@ -23,5 +14,5 @@ void jsonEntity::execute(){
 
 void jsonEntity::negotiate(const QByteArray &message)
 {
-    instanceNegotiator->write(message);
+    negotiatorInstance->write(message);
 }

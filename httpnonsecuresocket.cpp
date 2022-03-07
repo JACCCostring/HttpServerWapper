@@ -38,16 +38,28 @@ void HttpNonSecureSocket::onNewDataReady()
     //if request is a GET
     if(requestValidator.getHttpCommand().startsWith("GET")){
         qDebug()<<"Get Request";
+        //verifying if list has arguments before performance
+        //that means if not arguments then dont preceed
+        //this is because in some cases icon request automatically is sent without arguments
+        if(requestValidator.getHttpListArgs().size() > 0){
         //creating objs in runtime
         ClientImplementation *httpCImplementation = new jsonEntity(socketInstance);
+        httpCImplementation->setHttpRequestValidator(&requestValidator);
         httpCImplementation->execute();
+        } //end of if statement
     }
     //if request is a POST
     else if(requestValidator.getHttpCommand().startsWith("POST")){
         qDebug()<<"POST Request";
+        //verifying if list has arguments before performance
+        //that means if not arguments then dont preceed
+        //this is because in some cases icon request automatically is sent without arguments
+        if(requestValidator.getHttpListArgs().size() > 0){
         //creating objs in runtime
-        //ClientImplementation *httpCImplementation = new anyClassImplemented;
+        //ClientImplementation *httpCImplementation = new jsonEntity(socketInstance);
+        //httpCImplementation->setHttpRequestValidator(&requestValidator);
         //httpCImplementation->execute();
+        } //end of if statement
     }
     //disconnecting client from server
     socketInstance->disconnectFromHost();

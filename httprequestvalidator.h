@@ -2,6 +2,7 @@
 #define HTTPREQUESTVALIDATOR_H
 
 #include <QtCore>
+#include <QTcpSocket>
 #include "httprequest.h"
 
 class HttpRequestValidator: public HttpRequest

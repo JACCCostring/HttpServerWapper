@@ -88,7 +88,7 @@ Remember not need to worry about non of the classes already implemented, the onl
 
 An example is written where JSON operations are made.
 
-Note: Starting server reqiured a port in this case port 6082 is used.
+Note: Starting server required a port in this case port 6082 is used.
 
 Example parameters to be passed to the explorer
 

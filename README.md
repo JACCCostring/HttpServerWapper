@@ -1,4 +1,4 @@
-# HttpServerWapper
+# Http Server Wapper
 HTTP basic functionalities, GET, POST, DELETE, PUT for now only 2 implemented.
 
 -—HTTP Server Wrapper Explanation—-
@@ -63,6 +63,10 @@ Just write whatever class or code you want and give it form in the execute metho
 
 Note: if you wonder. Yes of course a HTTP Server must accept parameters/arguments and there you have it. HttpRequestValidator class deal with it, but the use of this class is internal that means you don’t need to worry about it. ClientImplementation abstract/interface class will have access to HttpRequest class members by calling params obj then he programmer/client will be able to retrieve a list of arguments from a Request, even the submitted methods ex: GET, PUT, POST or DELETE, even better the ClientImplementation has capabilities to do some JSON operations by calling jsonEngine obj.
 
+----ROUTING---
+
+Basic Routing concept is possible by accessing Params object.
+
 Params->command(“right http method”) can be GET, POST, DELETE and PUT, to verify if its the right http method.
 
 Params->getArgs(arg number).startsWith(“right parameter”) to get the right argument after the first / in the scheme or URL.
@@ -80,6 +84,8 @@ Note: Remember to set the negotiator this is for negotiate data back with client
 Remember not need to worry about non of the classes already implemented, the only class and method thought to be touch is HttpRequestHandler execute method.
 
 An example is written where JSON operations are made.
+
+Note: Starting server reqiured a port in this case port 6082 is used.
 
 Example parameters to be passed to the explorer
 

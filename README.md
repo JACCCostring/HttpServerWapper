@@ -11,6 +11,9 @@ HttpNonSecureSocket Implements a HTTP Socket non secure meaning that it does not
 
 Note: HttpNonSecureSocket does not need to be modified but if more support is need then the client/programmer could easily extend the class or re-implemented through subclassing HttpSocket.
 
+If the client/programmer decide to extend HttpSocket class with the finality to improve a socket that supports more secure capabilities or whatever the client/programmer want to do, then the new class extension/implementation must be set it, and this is done in the HttpServer.cpp file where IncommingConnection() method is located, where //creating abstract http socket with a new HttpNonSecureSocket instance
+    HttpSocket *httpThreadedSocket = new HttpNonSecureSocket(descriptor, this); is. So there HttpNonSecureSocket() must be replace by the new socket re-implementation.
+
 Note: All the classes made use of smart pointers std::shared_ptr<>() and std::unique_ptr<>() to avoid dangling pointers since not all the time Qt parent child relationship can be used.
 
 HTTP Server Wrapper Architecture

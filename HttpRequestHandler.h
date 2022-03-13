@@ -1,14 +1,14 @@
-#ifndef JSONENTITY_H
-#define JSONENTITY_H
+#ifndef HTTPREQUESTHANDLER_H
+#define HTTPREQUESTHANDLER_H
 
 #include "clientimplementation.h"
 #include <QTcpSocket>
 
-class jsonEntity : public ClientImplementation
+class HttpRequestHandler : public ClientImplementation
 {
 public: //this is class inherit from ClientImplementation
         //and will implement json functionalities
-    jsonEntity();
+    HttpRequestHandler();
     //override method
     void execute() override;
 
@@ -17,4 +17,4 @@ private:
     void negotiate(const QByteArray &);
 };
 
-#endif // JSONENTITY_H
+#endif // HTTPREQUESTHANDLER_H

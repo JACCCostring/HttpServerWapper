@@ -4,7 +4,7 @@
 #include "httprequestvalidator.h"
 #include "httpsocket.h"
 #include "httprequest.h"
-#include "jsonentity.h"
+#include "HttpRequestHandler.h"
 #include <QObject>
 
 class HttpNonSecureSocket : public HttpSocket

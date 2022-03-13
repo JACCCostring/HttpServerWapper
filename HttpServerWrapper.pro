@@ -9,13 +9,14 @@ CONFIG -= app_bundle
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        HttpRequestHandler.cpp \
         clientimplementation.cpp \
         httpnonsecuresocket.cpp \
         httprequest.cpp \
         httprequestvalidator.cpp \
         httpserver.cpp \
         httpsocket.cpp \
-        jsonentity.cpp \
+        jsonengine.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -24,10 +25,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    HttpRequestHandler.h \
     clientimplementation.h \
     httpnonsecuresocket.h \
     httprequest.h \
     httprequestvalidator.h \
     httpserver.h \
     httpsocket.h \
-    jsonentity.h
+    jsonengine.h

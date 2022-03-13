@@ -1,5 +1,6 @@
 #ifndef HTTPREQUEST_H
 #define HTTPREQUEST_H
+
 #include <QtCore>
 //abstract class
 class HttpRequest

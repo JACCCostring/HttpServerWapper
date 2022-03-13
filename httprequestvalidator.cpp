@@ -28,12 +28,22 @@ int HttpRequestValidator::getArgsNum(const QStringList &list)
     return argsNum;
 }
 
-QString HttpRequestValidator::getHttpCommand()
-{ //method override
-    return httpCommand;
+bool HttpRequestValidator::command(const QString command) const
+{
+    return httpCommand.startsWith(command);
 }
 
 QStringList HttpRequestValidator::getHttpListArgs()
 {   //method override
     return httpListArgs;
+}
+
+QString HttpRequestValidator::getArgs(int numArg) const
+{
+    return httpListArgs.at(numArg);
+}
+
+bool HttpRequestValidator::validateArgs(int numArg) const
+{
+    return httpListArgs.size() > numArg;
 }

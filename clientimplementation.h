@@ -2,6 +2,7 @@
 #define CLIENTIMPLEMENTATION_H
 
 #include "httprequestvalidator.h"
+#include "jsonengine.h"
 
 class ClientImplementation
 {
@@ -16,6 +17,7 @@ public: //this is a class interface to allow inheritance and creation of new cla
 protected: //shared ptr to allow assignation =
     std::shared_ptr<HttpRequestValidator> params;
     std::shared_ptr<QTcpSocket> negotiatorInstance;
+    std::shared_ptr<JsonEngine> jsonEngine;
 };
 
 #endif // CLIENTIMPLEMENTATION_H

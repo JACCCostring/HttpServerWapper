@@ -82,6 +82,12 @@ jsonEngine is already instantiated and initialised in the ClientImplementation i
 
 Note: HttpRequestValidator has to be set to allow the programmer/client implementation class to have access to arguments/parameters, and this is done by ClientImplementation->setHttpRequestValidator(&requestValidator); and no need to be touched
 
+—Important— 
+
+1- Validate argument/parameter before retrieve
+2- Parameter/arguments count start at 0
+3- Http method it’s only available in params->command() 
+
 Note: Remember to set the negotiator this is for negotiate data back with client connection and can be done with ClientImplementation->setNegotiator(socketInstance);
 
 Remember not need to worry about non of the classes already implemented, the only class and method thought to be touch is HttpRequestHandler execute method.

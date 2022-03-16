@@ -99,3 +99,16 @@ Note: Starting server required a port in this case port 6082 is used.
 Example parameters to be passed to the explorer
 
 http://127.0.0.1:6082/append/value/George/Smit/Georgia20144htAve/EastTown/merried/4260/
+
+-----Example----
+
+Note: this example is made with a different build code implementation then the original uploaded with the code.
+
+1 - adding a record to a database with a front-end DB gestor application that i developed.
+
+![image](https://user-images.githubusercontent.com/93591202/158585345-866c6ef5-5c41-4a95-859e-8ab439770a2c.png)
+
+2 - retrieving JSON data from a backend API implemented with this Http Server Wrapper.
+
+![image](https://user-images.githubusercontent.com/93591202/158585751-d2e1f841-a321-4f65-8545-b5b7c1fc249e.png)
+

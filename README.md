@@ -112,3 +112,7 @@ Note: this example is made with a different build code implementation then the o
 
 ![image](https://user-images.githubusercontent.com/93591202/158585751-d2e1f841-a321-4f65-8545-b5b7c1fc249e.png)
 
+3 - Hosting a web page and Serving statics files .html and .css.
+
+![image](https://user-images.githubusercontent.com/93591202/162624755-89e1a1c8-02fc-4861-8389-88c57042f363.png)
+

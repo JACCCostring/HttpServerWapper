@@ -9,7 +9,8 @@ void HttpRequest::setHttpCommand(const QString &cmd)
     httpCommand = cmd;
 }
 
-void HttpRequest::setHttpListArgs(const QString &route)
+void HttpRequest::setHttpListArgs(const QString &arg)
 {   //appending new route to list
-    httpListArgs.append(route);
+    httpListArgs.append(arg);
 }
+

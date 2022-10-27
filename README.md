@@ -76,6 +76,8 @@ Going strait to the poin.
 
 An example is written where JSON operations and serving static files like HTML and CSS is shown below. <b>Note:</b> JavaScript is also possible
 
+<b>Note:</b> example provided with code in HttpRequestHandler.cpp, it's just an scenario to show how to read and write responses.
+
 -----Example----
 
 1 - adding a record to a database with a front-end DB gestor application that i developed earlier.

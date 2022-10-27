@@ -3,8 +3,8 @@
 
 #include "httprequestvalidator.h"
 #include "httpsocket.h"
-#include "httprequest.h"
 #include "HttpRequestHandler.h"
+
 #include <QObject>
 
 class HttpNonSecureSocket : public HttpSocket
@@ -14,11 +14,10 @@ public:
     explicit HttpNonSecureSocket(int sDescriptor, QObject *parent = nullptr);
     //method to make handshake between client and server
     void handShakeInstance(QTcpSocket *, const QString &);
-
+// HttpSocket interface
 protected:
     void run() override;
 
-    // HttpSocket interface
 protected slots:
     void onNewDataReady() override;
     void onClosedConnection() override;

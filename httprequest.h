@@ -2,19 +2,21 @@
 #define HTTPREQUEST_H
 
 #include <QtCore>
+
 //abstract class
 class HttpRequest
 {
 public:
     HttpRequest();
 
-public:
-    //setters for httpCommand and httpListRoute not need to be virtual methods
-    //because its preferible to set command and list of args no matter what
+protected:
+    //setters for httpCommand, body and httpListRoute not need to be virtual methods
+    //because its preferible to set command, body and list of args no matter what
     void setHttpCommand(const QString &);
     void setHttpListArgs(const QString &);
 
-protected:
+    //variables
+    std::map<QString, QString> request; //container to parse request
     QString httpCommand;
     QStringList httpListArgs;
 };

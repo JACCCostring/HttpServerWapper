@@ -58,12 +58,9 @@ Basic Routing concept is possible by accessing Params object.
 
 Example:
 
-if(params->getRequest()["Method"].startsWith("GET"))
-{
-     if(params->getRequest()["Route"].startsWith("/coords")){
-        doSomething(coords);        
-        }
-}
+<b>if(params->getRequest()["Method"].startsWith("GET"))
+   if(params->getRequest()["Route"].startsWith("/coords"))
+   doSomething(coords);</b>
 
 -—Client/Developer Usage—-
 
@@ -75,7 +72,7 @@ Going strait to the poin.
 
 <b>2:</b> Add it as an static library to your project, then good to go.
 
-An example is written where JSON operations is shown below.
+An example is written where JSON operations and serving static files like HTML and CSS is shown below. <b>Note:</b> JavaScript is also possible
 
 -----Example----
 

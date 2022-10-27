@@ -26,7 +26,8 @@ void HttpRequestHandler::execute(){
             double x = jsonEngine->fromJson(params->getRequest()["Body"].toUtf8(), "coord-x").toDouble(); 
             double y = jsonEngine->fromJson(params->getRequest()["Body"].toUtf8(), "coord-y").toDouble();
             if(findCoords(Coords{x, y})){
-            jsonEngine->addJsonObj("coords found", x, y);
+            jsonEngine->addJsonObj("coord x found", x);
+            jsonEngine->addJsonObj("coord y found", y);
             negociatorInstance(jsonEngine->readAllJson());
             }
                 

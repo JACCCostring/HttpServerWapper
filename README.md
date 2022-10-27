@@ -58,12 +58,12 @@ Basic Routing concept is possible by accessing Params object.
 
 Example:
 
-<b>f(params->getRequest()["Method"].startsWith("GET"))
+if(params->getRequest()["Method"].startsWith("GET"))
 {
      if(params->getRequest()["Route"].startsWith("/coords")){
         doSomething(coords);        
         }
-}</b>
+}
 
 -—Client/Developer Usage—-
 

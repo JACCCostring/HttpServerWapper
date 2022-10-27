@@ -44,7 +44,9 @@ ClientImplementation class has a composite object of HttpRequestValidator aiming
 
 ClientImplementation class has a composite object of JsonEngine to allow the client/programmer to perform JSON actions.
 
-<b>Note:</b> If you wonder. Yes of course a HTTP Server must accept parameters/arguments and there you have it. HttpRequestValidator class deal with it, but the use of this class is internal that means you don’t need to touch it or worry about it. ClientImplementation abstract/interface class will have access to HttpRequest class members by calling params object then the client/programmer will be able to retrieve a list of arguments from a Request, even the submitted methods ex: GET, PUT, POST or DELETE, even better the ClientImplementation has capabilities to do some JSON operations by calling jsonEngine obj.
+<b>Note:</b> If you wonder. Yes of course an HTTP Server must accept parameters/arguments and XML or JSON data and there you have it. HttpRequestValidator class deal with it, but the use of this class is internal that means you don’t need to touch it or worry about it. ClientImplementation abstract/interface class will have access to HttpRequest class members by calling params object then the client/programmer will be able to retrieve a list of arguments from a Request, even the submitted methods ex: GET, PUT, POST or DELETE.
+
+And the ClientImplementation as an instancieted object for JSON capabilities to do some JSON operations by calling <b>jsonEngine</b> object.
 
 But for now parameters supports are JSON format but not Query parameters yet. I might work on it on later project versions.
 
@@ -76,13 +78,11 @@ An example is written where JSON operations and serving static files like HTML a
 
 -----Example----
 
-Note: this example is made with a different build code implementation then the original uploaded with the code.
-
-1 - adding a record to a database with a front-end DB gestor application that i developed.
+1 - adding a record to a database with a front-end DB gestor application that i developed earlier.
 
 ![image](https://user-images.githubusercontent.com/93591202/158585345-866c6ef5-5c41-4a95-859e-8ab439770a2c.png)
 
-2 - retrieving JSON data from a backend API implemented with this Http Server Wrapper.
+2 - retrieving JSON data from a an API implemented with this Http Wrapper Server.
 
 ![image](https://user-images.githubusercontent.com/93591202/158585751-d2e1f841-a321-4f65-8545-b5b7c1fc249e.png)
 
